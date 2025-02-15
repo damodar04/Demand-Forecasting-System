@@ -13,10 +13,10 @@ from sklearn.metrics import mean_absolute_error
 # ===========================
 @st.cache_data
 def load_data():
-    file1 = "https://github.com/damodar04/Demand-Forecasting-System/blob/main/Transactional_data_retail_01.csv"
-    file2 = "https://github.com/damodar04/Demand-Forecasting-System/blob/main/Transactional_data_retail_02.csv"
-    customers = "https://github.com/damodar04/Demand-Forecasting-System/blob/main/CustomerDemographics.csv"
-    products = "https://github.com/damodar04/Demand-Forecasting-System/blob/main/ProductInfo.csv"
+    file1 = "https://raw.githubusercontent.com/damodar04/Demand-Forecasting-System/main/Transactional_data_retail_01.csv"
+    file2 = "https://raw.githubusercontent.com/damodar04/Demand-Forecasting-System/main/Transactional_data_retail_02.csv"
+    customers = "https://raw.githubusercontent.com/damodar04/Demand-Forecasting-System/main/CustomerDemographics.csv"
+    products = "https://raw.githubusercontent.com/damodar04/Demand-Forecasting-System/main/ProductInfo.csv"
 
     transactions = pd.concat([pd.read_csv(file1), pd.read_csv(file2)], ignore_index=True)
     customers = pd.read_csv(r"c:\Users\a\Desktop\Usecase_DemandForecasting\Usecase_DemandForecasting\Data_Files\CustomerDemographics.csv")
