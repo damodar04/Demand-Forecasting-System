@@ -19,9 +19,8 @@ def load_data():
     products = "https://raw.githubusercontent.com/damodar04/Demand-Forecasting-System/main/ProductInfo.csv"
 
     transactions = pd.concat([pd.read_csv(file1), pd.read_csv(file2)], ignore_index=True)
-    customers = pd.read_csv(r"c:\Users\a\Desktop\Usecase_DemandForecasting\Usecase_DemandForecasting\Data_Files\CustomerDemographics.csv")
-    products = pd.read_csv(r"c:\Users\a\Desktop\Usecase_DemandForecasting\Usecase_DemandForecasting\Data_Files\ProductInfo.csv")
-
+    customers = pd.read_csv(customers)
+    products = pd.read_csv(products)
     transactions['InvoiceDate'] = pd.to_datetime(transactions['InvoiceDate'], format='mixed', dayfirst=True)
 
     df = transactions.merge(products, on='StockCode', how='left')
